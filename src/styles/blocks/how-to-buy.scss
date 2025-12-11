@@ -38,9 +38,17 @@
   height: 460px;
 
   background-image: url(/images/footer-bg.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+
+  @include on-tablet {
+    background-size: cover;
+  }
+
+  @include on-desktop {
+    background-size: cover;
+  }
 }
 
 .how-to-buy::before {
