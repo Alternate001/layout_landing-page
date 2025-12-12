@@ -35,21 +35,30 @@
 .footer__background {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  height: 460px;
+  position: relative;
+
+  padding-top: 62.5%;
 
   background-image: url(/images/footer-bg.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
 
   @include on-tablet {
+    padding-top: 0;
+    height: 400px;
     background-size: cover;
+    background-position: center;
   }
 
   @include on-desktop {
+    padding-top: 0;
+    height: 460px;
     background-size: cover;
+    background-position: center;
   }
 }
+
 
 .how-to-buy::before {
   content: '';
